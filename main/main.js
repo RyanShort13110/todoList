@@ -9,7 +9,7 @@ inputBox.onkeyup = ()=>{
   if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
     addBtn.classList.add("active"); //activate the add button
   }else{
-    addBtn.classList.remove("active"); //deactivate the add button
+    addBtn.classList.remove("active"); // else deactivate the add button
   }
 }
 showTasks(); //calling showTask function
