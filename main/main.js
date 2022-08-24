@@ -7,12 +7,13 @@ const deleteAllBtn = document.querySelector(".footer button");
 inputBox.onkeyup = ()=>{
   let userEnteredValue = inputBox.value; //getting user entered value
   if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
-    addBtn.classList.add("active"); //active the add button
+    addBtn.classList.add("active"); //activate the add button
   }else{
-    addBtn.classList.remove("active"); //unactive the add button
+    addBtn.classList.remove("active"); //deactivate the add button
   }
 }
 showTasks(); //calling showTask function
+
 addBtn.onclick = ()=>{ //when user click on plus icon button
   let userEnteredValue = inputBox.value; //getting input field value
   let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
@@ -36,9 +37,9 @@ function showTasks(){
   const pendingTasksNumb = document.querySelector(".pendingTasks");
   pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
   if(listArray.length > 0){ //if array length is greater than 0
-    deleteAllBtn.classList.add("active"); //active the delete button
+    deleteAllBtn.classList.add("active"); //activate the delete button
   }else{
-    deleteAllBtn.classList.remove("active"); //unactive the delete button
+    deleteAllBtn.classList.remove("active"); //deactivate the delete button
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
