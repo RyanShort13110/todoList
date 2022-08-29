@@ -12,10 +12,10 @@ inputBox.onkeyup = ()=>{
     addBtn.classList.remove("active"); // else deactivate the add button
   }
 }
-showTasks(); //calling showTask function
+showTasks(); //calling the showTask function
 
-addBtn.onclick = ()=>{ //when user click on plus icon button
-  let userEnteredValue = inputBox.value; //getting input field value
+addBtn.onclick = ()=>{ //when user clicks on the plus icon btn
+  let userEnteredValue = inputBox.value; //grab the input field value
   let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
   if(getLocalStorageData == null){ //if localstorage has no data
     listArray = []; //create a blank array
@@ -24,7 +24,7 @@ addBtn.onclick = ()=>{ //when user click on plus icon button
   }
   listArray.push(userEnteredValue); //pushing or adding new value in array
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
-  showTasks(); //calling showTask function
+  showTasks(); //calling the showTask function
   addBtn.classList.remove("active"); //unactive the add button once the task added
 }
 function showTasks(){
