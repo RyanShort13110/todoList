@@ -6,7 +6,7 @@ const deleteAllBtn = document.querySelector(".footer button");
 // onkeyup event
 inputBox.onkeyup = ()=>{
   let userEnteredValue = inputBox.value; //getting user entered value
-  if(userEnteredValue.trim() != 0){ //if the user value isn't only spaces
+  if(userEnteredValue.trim() != 0){ //ensure entered val isn't just spaces
     addBtn.classList.add("active"); //activate the add button
   }else{
     addBtn.classList.remove("active"); // else deactivate the add button
@@ -36,10 +36,10 @@ function showTasks(){
   }
   const pendingTasksNumb = document.querySelector(".pendingTasks");
   pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
-  if(listArray.length > 0){ //if array length is greater than 0
-    deleteAllBtn.classList.add("active"); //activate the delete button
+  if(listArray.length > 0){ //if the array length is greater than 0
+    deleteAllBtn.classList.add("active"); //activate delete button
   }else{
-    deleteAllBtn.classList.remove("active"); //deactivate the delete button
+    deleteAllBtn.classList.remove("active"); //deactivate delete button
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
@@ -52,7 +52,7 @@ function showTasks(){
 function deleteTask(index){
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
-  listArray.splice(index, 1); //delete or remove the li
+  listArray.splice(index, 1); //delete the li
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks(); //call the showTasks function
 }
