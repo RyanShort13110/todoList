@@ -9,12 +9,12 @@ inputBox.onkeyup = ()=>{
   if(userEnteredValue.trim() != 0){ //ensure entered val isn't just spaces
     addBtn.classList.add("active"); //activate the add button
   }else{
-    addBtn.classList.remove("active"); // else deactivate the add button
+    addBtn.classList.remove("active"); // otherwise deactivate the add button
   }
 }
-showTasks(); //calling the showTask function
+showTasks(); //call the showTask function
 
-addBtn.onclick = ()=>{ //when user clicks on the plus icon btn
+addBtn.onclick = ()=>{ //when user clicks on plus icon btn
   let userEnteredValue = inputBox.value; //grab the input field value
   let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
   if(getLocalStorageData == null){ //if localstorage has no data
