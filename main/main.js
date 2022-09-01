@@ -25,7 +25,7 @@ addBtn.onclick = ()=>{ //when user clicks on plus icon btn
   listArray.push(userEnteredValue); //pushing or adding new value in array
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //transforming js object into a json string
   showTasks(); //calling the showTask function
-  addBtn.classList.remove("active"); //unactive the add button once the task added
+  addBtn.classList.remove("active"); //deactivate the add button once the task added
 }
 function showTasks(){
   let getLocalStorageData = localStorage.getItem("New Todo");
@@ -36,10 +36,10 @@ function showTasks(){
   }
   const pendingTasksNumb = document.querySelector(".pendingTasks");
   pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
-  if(listArray.length > 0){ //if the array length is greater than 0
+  if(listArray.length > 0){ //if array length is greater than 0
     deleteAllBtn.classList.add("active"); //activate delete button
   }else{
-    deleteAllBtn.classList.remove("active"); //deactivate delete button
+    deleteAllBtn.classList.remove("active"); //otherwise deactivate delete button
   }
   let newLiTag = "";
   listArray.forEach((element, index) => {
