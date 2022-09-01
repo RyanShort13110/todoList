@@ -4,7 +4,7 @@ const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
 // onkeyup event
-inputBox.onkeyup = ()=>{
+inputBox.onkeyup = _ =>{
   let userEnteredValue = inputBox.value; //getting user entered value
   if(userEnteredValue.trim() != 0){ //ensure entered val isn't just spaces
     addBtn.classList.add("active"); //activate the add button
@@ -12,9 +12,9 @@ inputBox.onkeyup = ()=>{
     addBtn.classList.remove("active"); // otherwise deactivate the add button
   }
 }
-showTasks(); //call the showTask function
+showTasks(); //call showTask function
 
-addBtn.onclick = ()=>{ //when user clicks on plus icon btn
+addBtn.onclick = _ =>{ //when user clicks the plus icon btn
   let userEnteredValue = inputBox.value; //grab the input field value
   let getLocalStorageData = localStorage.getItem("New Todo"); //getting localstorage
   if(getLocalStorageData == null){ //if localstorage has no data
@@ -27,12 +27,12 @@ addBtn.onclick = ()=>{ //when user clicks on plus icon btn
   showTasks(); //calling the showTask function
   addBtn.classList.remove("active"); //deactivate the add button once the task added
 }
-function showTasks(){
-  let getLocalStorageData = localStorage.getItem("New Todo");
-  if(getLocalStorageData == null){
-    listArray = [];
+function showTasks(){ //creating showTasks function
+  let getLocalStorageData = localStorage.getItem("New Todo"); // grab new todo from local
+  if(getLocalStorageData == null){ //if local storage is null
+    listArray = []; //create new array
   }else{
-    listArray = JSON.parse(getLocalStorageData); 
+    listArray = JSON.parse(getLocalStorageData); //otherwise create listArray with local data
   }
   const pendingTasksNumb = document.querySelector(".pendingTasks");
   pendingTasksNumb.textContent = listArray.length; //passing the array length in pendingtask
