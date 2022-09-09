@@ -3,6 +3,7 @@ const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
+
 // onkeyup event
 inputBox.onkeyup = _ =>{
   let userEnteredValue = inputBox.value; //getting user entered value
@@ -48,6 +49,7 @@ function showTasks(){ //creating showTasks function
   todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
   inputBox.value = ""; //once task added leave the input field blank
 }
+
 // delete task function
 function deleteTask(index){
   let getLocalStorageData = localStorage.getItem("New Todo");
@@ -56,6 +58,7 @@ function deleteTask(index){
   localStorage.setItem("New Todo", JSON.stringify(listArray));
   showTasks(); //call the showTasks function
 }
+
 // delete all tasks function
 deleteAllBtn.onclick = ()=>{
   listArray = []; //empty the array
