@@ -21,7 +21,7 @@ body{
   margin: 120px auto;
   padding: 25px;
   border-radius: 4rem;
-  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
 }
 .wrapper header{
   font-size: 30px;
