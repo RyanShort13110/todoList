@@ -15,6 +15,7 @@ body{
   height: 100vh;
   /* overflow: hidden; */
   padding: 10px;
+  background: #b35349;
 }
 
 .wrapper{
@@ -52,7 +53,7 @@ body{
 }
 
 .inputField input:focus{
-  border-color: #ad1414;
+  border-color: purple;
 }
 
 .inputField button{
