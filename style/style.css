@@ -13,10 +13,9 @@ body{
   height: 100vh;
   /* overflow: hidden; */
   padding: 10px;
-  background: linear-gradient(to bottom, #fdfdfd 0%, #000000 100%);
 }
 .wrapper{
-  background: #fff;
+  background: wheat;
   max-width: 400px;
   width: 100%;
   margin: 120px auto;
@@ -27,6 +26,7 @@ body{
 .wrapper header{
   font-size: 30px;
   font-weight: 600;
+  border-bottom: 2px solid purple;
 }
 .wrapper .inputField{
   margin: 20px 0;
