@@ -45,11 +45,11 @@ function showTasks(){ //creating showTasks function
   listArray.forEach((element, index) => {
     newLiTag += `<li>${element}<span class="icon" onclick="deleteTask(${index})"><i class="fas fa-trash"></i></span></li>`;
   });
-  todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
-  inputBox.value = ""; //once task added leave the input field blank
+  todoList.innerHTML = newLiTag; //add a new li tag inside ul
+  inputBox.value = ""; //once to-do is added, clear the input
 }
 
-// delete task function
+// delete single to-do function
 function deleteTask(index){
   let getLocalStorageData = localStorage.getItem("New Todo");
   listArray = JSON.parse(getLocalStorageData);
@@ -58,7 +58,7 @@ function deleteTask(index){
   showTasks(); //call the showTasks function
 }
 
-// delete all tasks function
+// delete all to-dos function
 deleteAllBtn.onclick = _ => {
   listArray = []; //empty the array
   localStorage.setItem("New Todo", JSON.stringify(listArray)); //set the item in localstorage
