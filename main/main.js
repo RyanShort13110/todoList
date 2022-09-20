@@ -4,7 +4,6 @@ const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
 
-// onkeyup event
 inputBox.onkeyup = _ =>{
   let userEnteredValue = inputBox.value; //getting user entered value
   if(userEnteredValue.trim() != 0){ //ensure entered val isn't just spaces
