@@ -15,7 +15,7 @@ body{
   height: 100vh;
   /* overflow: hidden; */
   padding: 10px;
-  background: #b35349;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .wrapper{
@@ -31,7 +31,7 @@ body{
 .wrapper header{
   font-size: 30px;
   font-weight: 600;
-  border-bottom: 2px solid purple;
+  border-bottom: 2px solid rgb(185, 4, 4);
 }
 
 .wrapper .inputField{
